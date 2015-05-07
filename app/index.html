@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="App" >
+	<head>
+		<title>CMS?</title>
+
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css">
+
+		<style type="text/css" class="init">
+		
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
+
+		<script src="js/main.js"></script>
+		<script type="text/javascript" class="init"></script>
+
+	</head>
+
+	<body>
+
+		<!-- try out angular js? -->
+		<!-- TODO make a dropdown with registered users -->
+		<!-- TODO register user form -->
+
+		<div ng-controller="ListCtrl">
+			<select data-native-menu="false" data-role="listview" ng-options="user as user.user for user in users " ng-model="selected" ng-change="update(selected)">
+				Users:
+				{{user.user}}
+			</select>
+		</div>
+		<div class="display">
+
+			<table id="example" class="display" cellspacing="0" width="50%">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Password Hash</th>
+						<th>Api Key</th>
+						<th>Participation</th>
+						<th>Engagement</th>
+						<th>Responsiveness</th>
+						<th>Time Init</th>
+						<th>Time Prompt</th>
+						<th>Contexts</th>
+					</tr>
+				</thead>
+
+			</table>
+
+		</div>
+
+		<div>
+			ID:
+			<p class="user-id">
+
+				Password Hash:
+			<p class="user-password">
+
+			</p>
+			Api Key:
+			<p class="user-api_key">
+
+		</div>
+
+	</body>
+</html>
